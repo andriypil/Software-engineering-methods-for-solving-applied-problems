@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Knapsack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Задача "Рюкзак"</h1>
+
+  <div class="input">
+
+    <label>Кількість предметів:</label>
+    <input id="n" type="number" value="7">
+
+    <label>Макс вага:</label>
+    <input id="W" type="number" value="29">
+
+    <label>Ваги:</label>
+    <input id="weights" value="5,6,4,6,5,6,4">
+
+    <label>Цінності:</label>
+    <input id="values" value="4,8,8,13,12,11,14">
+
+    <label>Метод:</label>
+    <select id="method">
+      <option value="dp">Динамічне програмування</option>
+      <option value="brute">Перебір</option>
+      <option value="rec">Рекурсія</option>
+      <option value="greedy">Жадібний</option>
+      <option value="branch">Гілки і межі</option>
+      <option value="brute_force">Груба сила</option>
+    </select>
+
+    <button onclick="runAll()">Запустити</button>
+
+  </div>
+  <div id="output"></div>
+
+  <h3 style="text-align:center;">Процес:</h3>
+  <div id="log"></div>
+
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

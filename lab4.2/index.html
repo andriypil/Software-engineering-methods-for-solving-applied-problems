@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтерполяція та МНК</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Апроксимація функцій методами інтерполяції та МНК</h1>
+
+        <div class="controls">
+
+            <label class="wer">Вибрати набір точок:</label>
+            <select id="datasetSelect">
+                <option value="5">5 точок</option>
+                <option value="10" selected>10 точок</option>
+                <option value="20">20 точок</option>
+            </select>
+
+            <textarea id="pointsInput" rows="12"></textarea>
+
+            <div class="buttons">
+                <label class="wer">
+                    Степінь полінома МНК:
+                    <input type="number" id="degree" value="2" min="1" max="5">
+                </label>
+
+                <button id="buildBtn">Побудувати</button>
+                <button id="clearBtn">Очистити</button>
+            </div>
+
+            <div id="error"></div>
+        </div>
+
+        <div id="results">
+            <h2>Результати</h2>
+            <p class="wer" id="lagrangeText"></p>
+            <p class="wer" id="mnkText"></p>
+            <p class="wer" id="rmseText"></p>
+        </div>
+
+        <svg id="chart" width="1200" height="600"></svg>
+    </div>
+
+    <script src="interpolation.js"></script>
+    <script src="mnk.js"></script>
+    <script src="visualization.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

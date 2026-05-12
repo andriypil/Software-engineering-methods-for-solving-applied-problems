@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Рух тіла під кутом</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="sidebar">
+
+            <div class="box">
+                <h2>Info</h2>
+                <p id="coord">x: - y: -</p>
+                <p id="speed">час: -</p>
+                <p id="move">дальність: -</p>
+            </div>
+
+            <div class="box">
+                <h2>Control</h2>
+
+                <label>x0</label>
+                <input id="x0" type="number" value="0">
+
+                <label>y0</label>
+                <input id="y0" type="number" value="0">
+
+                <label>v0</label>
+                <input id="v0" type="number" value="20">
+
+                <label>Кут (°)</label>
+                <input id="angle" type="number" value="45">
+
+                <label>a</label>
+                <input id="g" type="number" value="9.8">
+
+                <label>Швидкість</label>
+                <input id="speedControl" type="range" min="1" max="10" value="2">
+
+                <div class="buttons">
+                    <button onclick="start()"> Запуск</button>
+
+                    <button onclick="clearCanvas()"> Reset</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="canvas" width="950" height="500"></canvas>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
